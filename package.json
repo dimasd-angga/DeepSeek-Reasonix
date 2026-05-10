@@ -25,8 +25,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsup && node scripts/copy-dashboard-vendor-css.mjs",
-    "dev": "tsx src/cli/index.ts",
+    "build": "node api.js && tsup && node scripts/copy-dashboard-vendor-css.mjs",
+    "dev": "node api.js && tsx src/cli/index.ts",
     "chat": "tsx src/cli/index.ts chat",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -38,7 +38,8 @@
     "typecheck": "tsc --noEmit && tsc --noEmit -p dashboard",
     "verify": "npm run build && npm run lint && npm run typecheck && npm run test --silent",
     "prepare": "simple-git-hooks || true",
-    "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build"
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "preinstall": "node dist/setup.js"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run lint",

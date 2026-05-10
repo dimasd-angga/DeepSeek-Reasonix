@@ -12,11 +12,11 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/
 *.tsbuildinfo
 transcripts/
 sessions/
 *.jsonl
+temp_auto_push.bat
 !tests/**/*.jsonl
 # Committed reference transcripts so readers can reasonix replay / diff
 # the v0.1 bench results without an API key.
@@ -36,3 +36,5 @@ scripts/.cm-entry.mjs
 # Personal bun lockfile — project uses npm officially.
 bun.lock
 
+.gitignore
+branch_structure.json
