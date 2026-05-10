@@ -2,8 +2,6 @@ node_modules/
 dist/
 coverage/
 .stryker-tmp/
-.env
-.env.local
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -12,7 +10,6 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/
 *.tsbuildinfo
 transcripts/
 sessions/
@@ -36,3 +33,8 @@ scripts/.cm-entry.mjs
 # Personal bun lockfile — project uses npm officially.
 bun.lock
 
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
+config.bat
